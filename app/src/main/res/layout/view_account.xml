@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="99dp"
+        android:padding="12dp"
+        android:layout_weight="0"
+        android:background="#FFBBBBBB"
+        android:id="@+id/UserView" tools:ignore="InefficientWeight">
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/head"
+            android:text="名字"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_alignParentBottom="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/head"
+            android:gravity="bottom"
+            android:includeFontPadding="false"
+            android:text="ID : ???"
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFBBBBBB">
+
+        <ImageView
+            android:src="@drawable/diamond"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/UserImageView1" tools:ignore="ContentDescription,DuplicateIds"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="钱包"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/UserImageView1"
+            android:layout_marginStart="10dp" tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFBBBBBB"
+        android:id="@+id/DeadList">
+
+        <ImageView
+            android:src="@drawable/shit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/UserImageView4" tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="冥人堂"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/UserImageView4"
+            android:layout_marginStart="10dp" tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFBBBBBB"
+        android:id="@+id/Author">
+
+        <ImageView
+            android:src="@drawable/java"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/UserImageView3" tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开发团队"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/UserImageView3"
+            android:layout_marginStart="10dp" tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFBBBBBB"
+        android:id="@+id/set">
+
+        <ImageView
+            android:src="@drawable/set"
+            android:id="@+id/UserImageView2"
+            android:layout_width="30dp"
+            android:layout_height="30dp" tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/UserImageView2"
+            android:layout_marginStart="10dp" tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

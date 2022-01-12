@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dd.azusa">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".function.Control"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Azusa"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,MissingClass,UnusedAttribute">
+        <activity
+            android:name=".SetUp"
+            android:label="设置"
+            android:exported="false" />
+        <activity
+            android:name=".MyInfo"
+            android:exported="false"
+            android:label="我的信息" />
+        <activity
+            android:name=".Author"
+            android:exported="false"
+            android:label="开发团队" />
+        <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
+            android:name=".DeadList"
+            android:exported="false"
+            android:label="冥人堂" />
+        <activity
+            android:name=".UpDate"
+            android:exported="true"
+            android:label="软件更新" />
+        <activity
+            android:name=".Login"
+            android:exported="true" />
+        <activity
+            android:name=".Main"
+            android:exported="true" />
+        <activity
+            android:name=".Load"
+            android:exported="true"
+            android:theme="@style/Theme.NoTitleFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.dd.azusa.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_weight="1"
+	android:background="#FFBFBFBF">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp"
+		android:layout_weight="0"
+		android:background="#FFBBBBBB"
+		android:id="@+id/UserV">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="头像"
+			android:textSize="20dp"
+			android:layout_centerVertical="true"
+			android:layout_marginStart="10dp"/>
+
+		<ImageView
+			android:id="@+id/HeadView"
+			android:layout_width="70dp"
+			android:layout_height="70dp"
+			android:layout_alignParentEnd="true"
+			app:srcCompat="@mipmap/ic_launcher"
+			tools:ignore="ContentDescription" />
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp"
+		android:layout_weight="0"
+		android:background="#FFBBBBBB"
+		android:id="@+id/UserView"
+		android:layout_marginTop="10dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="昵称"
+			android:textSize="20dp"
+			android:layout_centerVertical="true"
+			android:layout_marginStart="10dp"/>
+
+		<TextView
+			android:id="@+id/NameView"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:text="用户名称"
+			android:textSize="20dp" />
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp"
+		android:layout_weight="0"
+		android:background="#FFBBBBBB"
+		android:id="@+id/Quit"
+		android:layout_marginTop="10dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="退出登陆"
+			android:textSize="20dp"
+			android:layout_centerHorizontal="true"/>
+
+	</RelativeLayout>
+
+</LinearLayout>
+

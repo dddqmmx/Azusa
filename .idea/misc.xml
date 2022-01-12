@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.30925925925925923" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/drawable/btn_normal.xml" value="0.21145833333333333" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/drawable/btn_selector.xml" value="0.21145833333333333" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/drawable/dialog_style.xml" value="0.36666666666666664" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/drawable/edge.xml" value="0.30185185185185187" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/drawable/ic_launcher_background.xml" value="0.30925925925925923" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/drawable/shape_dialog.xml" value="0.21145833333333333" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/drawable/style_dialog.xml" value="0.36203703703703705" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_author.xml" value="0.35578144853875476" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_chat.xml" value="0.22192028985507245" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_dead_list.xml" value="0.2318840579710145" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_load.xml" value="0.3333333333333333" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_login.xml" value="0.27445652173913043" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_set_up.xml" value="0.2210144927536232" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_up_date.xml" value="0.4025670945157526" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_userinfo.xml" value="0.4466666666666667" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/style_dialog.xml" value="0.23278985507246377" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/test.xml" value="0.22" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/title.xml" value="0.27445652173913043" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_account.xml" value="0.3333333333333333" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_amessage.xml" value="0.1953125" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_buddy.xml" value="0.18297101449275363" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_chat.xml" value="0.18297101449275363" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_dialog.xml" value="0.5817223198594025" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_image.xml" value="0.21354166666666666" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_message_a.xml" value="0.6" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_message_b.xml" value="0.1716485507246377" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_news.xml" value="0.3333333333333333" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_title.xml" value="0.254981884057971" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/menu/navigation.xml" value="0.1" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.30925925925925923" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.19583333333333333" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/xml/file_paths.xml" value="0.1831306990881459" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.4025670945157526" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

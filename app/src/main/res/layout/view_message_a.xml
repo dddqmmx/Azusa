@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/head_a"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/name_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/head_a"
+        android:text="名字"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:id="@+id/news_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_a"
+        android:layout_marginStart="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginEnd="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_toLeftOf="@id/head_a"
+        android:background="@drawable/btn_selector"
+        android:orientation="horizontal"
+        android:padding="10dp" />
+
+</RelativeLayout>

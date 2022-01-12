@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFBFBFBF">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFBBBBBB"
+        android:id="@+id/setimagepath">
+
+        <ImageView
+            android:src="@drawable/image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/UserImageView1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图片路径"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/UserImageView1"
+            android:layout_marginStart="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFBBBBBB"
+        android:id="@+id/protocol">
+
+        <ImageView
+            android:src="@drawable/link"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/UserImageView2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络协议"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/UserImageView2"
+            android:layout_marginStart="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFBBBBBB"
+        android:id="@+id/delete">
+
+        <ImageView
+            android:src="@drawable/delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/UserImageView3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清除缓存"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/UserImageView3"
+            android:layout_marginStart="10dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
