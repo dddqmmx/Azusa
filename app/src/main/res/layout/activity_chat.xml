@@ -12,17 +12,23 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         tools:ignore="InefficientWeight">
+
+
         <ScrollView
+            android:id="@+id/Scroll"
+            android:transcriptMode="alwaysScroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/Scroll"
-            tools:ignore="InefficientWeight,ScrollViewCount">
+            android:fillViewport="true"
+            tools:ignore="InefficientWeight,ScrollViewCount,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
             <LinearLayout
-                android:orientation="vertical"
+                android:id="@+id/MessageList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/MessageList"
+                android:orientation="vertical"
                 android:padding="10dp">
+
             </LinearLayout>
         </ScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
