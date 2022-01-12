@@ -39,7 +39,7 @@ public class Load extends AppCompatActivity {
                     activity.runOnUiThread(()->{
                         Dialogs dialogs = new Dialogs(this,R.style.MyDialog);
                         dialogs.setCancelable(false);      //是否可以让用户手动关闭
-                        dialogs.setTitle("1234567890更新");
+                        dialogs.setTitle("更新");
                         dialogs.setMessage(
                             "本次更新内内容:\n" +
                             control.getUpDateInfo()
