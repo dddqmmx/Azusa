@@ -25,13 +25,13 @@ import com.dd.azusa.function.Control;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 public class Chat extends AppCompatActivity {
 
     String chatName;
     String type;
     long chatId;
+
+    public int h = 0;
 
     Control control;                    //控制方法
     Activity activity;
@@ -88,17 +88,14 @@ public class Chat extends AppCompatActivity {
                 String upMsg = contact.upRefresh();
                 JSONObject jsonObject =new JSONObject(upMsg);
                 if (jsonObject.getInt("row")!=0){
+                    int height=scrollView.getChildAt(0).getHeight();
                     LinearLayout historyView=new LinearLayout(this);
                     historyView.setOrientation(LinearLayout.VERTICAL);
                     System.out.println(upMsg);
                     addMessage(jsonObject,historyView);
-                    AtomicInteger height= new AtomicInteger(0);
-                    messageList.post(()->{
-                        height.set(messageList.getHeight());
-                    });
                     messageList.addView(historyView,0);
                     scrollView.post(() -> {
-                        scrollView.scrollTo(0, height.get() - 200);
+                        scrollView.scrollTo(0, scrollView.getChildAt(0).getHeight() -height - 200);
                     });
                 }else {
                     System.out.println("区块到顶");
