@@ -94,9 +94,7 @@ public class Chat extends AppCompatActivity {
                     System.out.println(upMsg);
                     addMessage(jsonObject,historyView);
                     messageList.addView(historyView,0);
-                    scrollView.post(() -> {
-                        scrollView.scrollTo(0, scrollView.getChildAt(0).getHeight() -height - 200);
-                    });
+                    new Handler().postDelayed(() -> scrollView.scrollTo(0, scrollView.getChildAt(0).getHeight() -height - 200),200);
                 }else {
                     System.out.println("区块到顶");
                 }
