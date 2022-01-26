@@ -17,6 +17,7 @@
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_load.xml" value="0.3333333333333333" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_login.xml" value="0.27445652173913043" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_my_info.xml" value="0.2907608695652174" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_set_up.xml" value="0.2210144927536232" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_up_date.xml" value="0.4025670945157526" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/activity_userinfo.xml" value="0.4466666666666667" />
@@ -27,11 +28,13 @@
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_amessage.xml" value="0.1953125" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_buddy.xml" value="0.18297101449275363" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_chat.xml" value="0.18297101449275363" />
-        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_dialog.xml" value="0.5817223198594025" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_dialog.xml" value="0.5" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_dialog_edit_text.xml" value="0.2520833333333333" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_image.xml" value="0.21354166666666666" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_message_a.xml" value="0.6" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_message_b.xml" value="0.1716485507246377" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_news.xml" value="0.3333333333333333" />
+        <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_set_head.xml" value="0.24947916666666667" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/layout/view_title.xml" value="0.254981884057971" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/menu/navigation.xml" value="0.1" />
         <entry key="..\:/project/Android/Azusa/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.30925925925925923" />

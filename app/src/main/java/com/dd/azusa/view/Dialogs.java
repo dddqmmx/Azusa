@@ -3,9 +3,12 @@ package com.dd.azusa.view;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.dd.azusa.R;
@@ -17,10 +20,13 @@ public class Dialogs extends Dialog {
     private View view;
     private Button no;//取消按钮
     private TextView titleView;
+    private RelativeLayout viewList;
+    private EditText editTextView;
     private TextView messageView;
 
     private String title;
     private String message;
+    private String editText;
     private String yesText;
     private String noText;
 
@@ -62,6 +68,7 @@ public class Dialogs extends Dialog {
         view = findViewById(R.id.view);
         no = findViewById(R.id.no);
         titleView = findViewById(R.id.title);
+        viewList = findViewById(R.id.viewList);
         messageView = findViewById(R.id.message);
     }
 
@@ -74,6 +81,15 @@ public class Dialogs extends Dialog {
 
         if (message != null) {
             messageView.setText(message);
+        }else {
+            viewList.removeView(messageView);
+        }
+
+        if (editText != null) {
+            LayoutInflater inflater = getLayoutInflater();
+            editTextView = (EditText) inflater.inflate(R.layout.view_dialog_edit_text,null);
+            editTextView.setText(this.editText);
+            viewList.addView(editTextView);
         }
 
         if (yesText != null) {
@@ -123,6 +139,14 @@ public class Dialogs extends Dialog {
     // 设置消息
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getEditText(){
+        return editTextView.getText().toString();
+    }
+
+    public void setEditText(String message){
+        this.editText = message;
     }
 
     // 设置取消
