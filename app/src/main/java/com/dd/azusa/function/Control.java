@@ -18,6 +18,7 @@ import androidx.core.app.ActivityCompat;
 import com.dd.azusa.util.Files;
 import com.dd.azusa.util.Server;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -351,6 +352,10 @@ public class Control extends Application {
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public boolean uploadUserHead(File file) {
+        return Server.Upload(file,url+"UploadUserHead.php?user="+user+"&pass="+pass);
     }
 
 }

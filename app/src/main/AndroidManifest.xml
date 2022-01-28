@@ -23,9 +23,12 @@
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,MissingClass,UnusedAttribute">
         <activity
-            android:name=".SetUp"
-            android:label="设置"
+            android:name=".FileList"
             android:exported="false" />
+        <activity
+            android:name=".SetUp"
+            android:exported="false"
+            android:label="设置" />
         <activity
             android:name=".MyInfo"
             android:exported="false"

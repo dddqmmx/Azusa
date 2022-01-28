@@ -2,6 +2,7 @@ package com.dd.azusa;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -12,15 +13,21 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.dd.azusa.function.Control;
 import com.dd.azusa.view.Dialogs;
 
+import java.io.File;
+
 public class MyInfo extends AppCompatActivity {
+
+
     public Activity activity;
     Control control;
     public PopupWindow popupWindow;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,17 +60,28 @@ public class MyInfo extends AppCompatActivity {
             popupWindow.setOutsideTouchable(true);
             popupWindow.setTouchable(true);
             popupWindow.showAtLocation(contentView, Gravity.BOTTOM, 0, 0);
+            TextView open_album=contentView.findViewById(R.id.open_album);
+            open_album.setOnClickListener(view14 -> {
+                startActivityForResult(new Intent(MyInfo.this,FileList.class),1);    //进入主界面
+                popupWindow.dismiss();
+                popupWindow=null;
+            });
             TextView cancel=contentView.findViewById(R.id.cancel);
             cancel.setOnClickListener(view13 -> {
                 popupWindow.dismiss();
                 popupWindow=null;
             });
-            TextView open_album=contentView.findViewById(R.id.open_album);
-            open_album.setOnClickListener(view14 -> {
-                popupWindow.dismiss();
-                popupWindow=null;
-            });
         });
-        RelativeLayout UserView=findViewById(R.id.UserView);
+
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK){
+            assert data != null;
+            control.uploadUserHead(new File(data.getStringExtra("filePath")));
+        }
+    }
+
 }
