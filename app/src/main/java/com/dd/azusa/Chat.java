@@ -1,7 +1,9 @@
 package com.dd.azusa;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -25,13 +27,13 @@ import com.dd.azusa.function.Control;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.InputStream;
+
 public class Chat extends AppCompatActivity {
 
     String chatName;
     String type;
     long chatId;
-
-    public int h = 0;
 
     Control control;                    //控制方法
     Activity activity;
@@ -139,6 +141,18 @@ public class Chat extends AppCompatActivity {
             contact.seedMsg(content.getText().toString());
             content.setText("");
         });
+
+        ImageView imageView = findViewById(R.id.image);
+        imageView.setOnClickListener((view)->{
+            Intent i = new Intent();
+            /* 开启Pictures画面Type设定为image */
+            i.setType("image/*");
+            /* 使用Intent.ACTION_GET_CONTENT这个Action */
+            i.setAction(Intent.ACTION_GET_CONTENT);
+            /* 取得相片后返回本画面 */
+            startActivityForResult(i, 1);
+            //control.sendImage(new File("/storage/emulated/0/-0/Screenshot_2021-05-12-08-10-24-688_com.google.android.youtube.png"),String.valueOf(chatId));
+        });
     }
 
     public void addMessage(JSONObject messageJson,LinearLayout messageList) throws JSONException {
@@ -217,5 +231,21 @@ public class Chat extends AppCompatActivity {
             e.printStackTrace();
         }
         super.onDestroy();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            Uri uri = data.getData();
+            ContentResolver cr = this.getContentResolver();
+            try {
+                InputStream is = cr.openInputStream(uri);
+                control.sendImage(is,String.valueOf(chatId));
+                System.out.println(uri);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

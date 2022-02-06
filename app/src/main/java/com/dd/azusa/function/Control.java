@@ -20,6 +20,7 @@ import com.dd.azusa.util.Server;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -356,6 +357,24 @@ public class Control extends Application {
 
     public boolean uploadUserHead(File file) {
         return Server.Upload(file,url+"UploadUserHead.php?user="+user+"&pass="+pass);
+    }
+
+    //发送图片
+    public void sendImage(File file,String group){
+        try {
+            System.out.println(file.getPath());
+            Server.Upload(file,url+"Send.php?user="+user+"&pass="+pass+"&group="+group+"&type=image");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void sendImage(InputStream is, String group){
+        try {
+            Server.Upload(is,url+"Send.php?user="+user+"&pass="+pass+"&group="+group+"&type=image");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }

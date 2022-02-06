@@ -125,4 +125,57 @@ public class Server{
 		}
 		return false;
 	}
+	public static boolean Upload(InputStream is,String path){
+		String BOUNDARY = UUID.randomUUID().toString(); // 边界标识 随机生成
+		String PREFIX = "--", LINE_END = "\r\n";
+		String CONTENT_TYPE = "multipart/form-data"; // 内容类型
+		System.out.println(path);
+		try {
+			URL url = new URL(path);
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setReadTimeout(TIME_OUT);
+			conn.setConnectTimeout(TIME_OUT);
+			conn.setDoInput(true); // 允许输入流
+			conn.setDoOutput(true); // 允许输出流
+			conn.setUseCaches(false); // 不允许使用缓存
+			conn.setRequestMethod("POST"); // 请求方式
+			conn.setRequestProperty("Charset", CHARSET); // 设置编码
+			conn.setRequestProperty("connection", "keep-alive");
+			conn.setRequestProperty("Content-Type", CONTENT_TYPE + ";boundary="
+					+ BOUNDARY);
+			if (is != null) {
+				OutputStream outputSteam = conn.getOutputStream();
+
+				DataOutputStream dos = new DataOutputStream(outputSteam);
+				String sb = PREFIX +
+						BOUNDARY +
+						LINE_END +
+						"Content-Disposition: form-data; name=\"file\"; filename=\""
+						+ "file.name" + "\"" + LINE_END +
+						"Content-Type: application/octet-stream; charset="
+						+ CHARSET + LINE_END +
+						LINE_END;
+				dos.write(sb.getBytes());
+				byte[] bytes = new byte[1024];
+				int len;
+				while ((len = is.read(bytes)) != -1) {
+					dos.write(bytes, 0, len);
+				}
+				is.close();
+				dos.write(LINE_END.getBytes());
+				byte[] end_data = (PREFIX + BOUNDARY + PREFIX + LINE_END)
+						.getBytes();
+				dos.write(end_data);
+				dos.flush();
+				int res = conn.getResponseCode();
+				System.out.println(res);
+				if (res == 200) {
+					return true;
+				}
+			}
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 }
