@@ -23,6 +23,9 @@
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,MissingClass,UnusedAttribute">
         <activity
+            android:name=".UserInfo"
+            android:exported="false" />
+        <activity
             android:name=".FileList"
             android:exported="false" />
         <activity

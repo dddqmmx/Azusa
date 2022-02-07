@@ -192,6 +192,11 @@ public class Chat extends AppCompatActivity {
         View entryView=factory.inflate(R.layout.view_message_a,null);
         ImageView head=entryView.findViewById(R.id.head_a);
         control.setUserHead(id,head,this);
+        head.setOnClickListener((view)->{
+            Intent intent = new Intent(this,UserInfo.class);
+            intent.putExtra("id",Long.parseLong(id));
+            startActivity(intent);
+        });
         TextView nameText=entryView.findViewById(R.id.name_a);
         nameText.setText(control.getUserName(id));
         LinearLayout news = entryView.findViewById(R.id.news_a);
@@ -203,6 +208,11 @@ public class Chat extends AppCompatActivity {
         View entryView=factory.inflate(R.layout.view_message_b,null);
         ImageView head=entryView.findViewById(R.id.head_b);
         control.setUserHead(id,head,this);
+        head.setOnClickListener((view)->{
+            Intent intent = new Intent(this,UserInfo.class);
+            intent.putExtra("id",Long.parseLong(id));
+            startActivity(intent);
+        });
         TextView nameText=entryView.findViewById(R.id.name_b);
         nameText.setText(control.getUserName(id));
         LinearLayout news = entryView.findViewById(R.id.news_b);

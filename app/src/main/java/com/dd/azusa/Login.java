@@ -55,7 +55,7 @@ public class Login extends AppCompatActivity {
             String user=userEdit.getText().toString();      //用户输入的用户名
             String pass=passEdit.getText().toString();      //用户输入的密码
 
-            //实例化新弹窗
+            //实例化新弹窗d
             Dialogs dialogs = new Dialogs(this,R.style.MyDialog);
 
             //判断是登录模式还是注册模式

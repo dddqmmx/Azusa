@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFBFBFBF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/Scroll"
+        android:transcriptMode="alwaysScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_weight="1"
+        tools:ignore="InefficientWeight,ScrollViewCount,SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+        <RelativeLayout
+            android:id="@+id/MessageList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/UserView"
+                android:layout_width="match_parent"
+                android:layout_height="99dp"
+                android:layout_weight="0"
+                android:background="#FFBBBBBB"
+                android:padding="12dp"
+                tools:ignore="InefficientWeight">
+
+                <ImageView
+                    android:id="@+id/head"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    app:srcCompat="@mipmap/ic_launcher"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/head"
+                    android:text="名字"
+                    android:textSize="20dp"
+                    tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/head"
+                    android:gravity="bottom"
+                    android:includeFontPadding="false"
+                    android:text="ID : ???"
+                    android:textSize="20dp"
+                    tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFADADAD"
+        android:id="@+id/layout">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="加好友"
+            android:id="@+id/add"
+            tools:ignore="HardcodedText"
+            android:layout_margin="5dp"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发消息"
+            android:id="@+id/send"
+            tools:ignore="HardcodedText"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>
