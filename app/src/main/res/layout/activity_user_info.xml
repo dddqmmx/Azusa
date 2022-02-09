@@ -79,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="加好友"
-            android:id="@+id/add"
+            android:id="@+id/addFriend"
             tools:ignore="HardcodedText"
             android:layout_margin="5dp"/>
         <Button
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="发消息"
-            android:id="@+id/send"
+            android:id="@+id/sendMessage"
             tools:ignore="HardcodedText"
             android:layout_margin="5dp"/>
     </LinearLayout>

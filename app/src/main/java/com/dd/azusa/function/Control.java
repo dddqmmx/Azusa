@@ -355,8 +355,8 @@ public class Control extends Application {
         }
     }
 
-    public boolean uploadUserHead(File file) {
-        return Server.Upload(file,url+"UploadUserHead.php?user="+user+"&pass="+pass);
+    public void uploadUserHead(File file) {
+        Server.Upload(file, url + "UploadUserHead.php?user=" + user + "&pass=" + pass);
     }
 
     //发送图片
@@ -377,4 +377,11 @@ public class Control extends Application {
         }
     }
 
+    public void addFriend(long id){
+        try {
+            Server.Loadweb(url + "AddFriend.php?user="+user+"&pass="+pass+"&id=" + id);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
