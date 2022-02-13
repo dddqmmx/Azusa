@@ -384,4 +384,13 @@ public class Control extends Application {
             e.printStackTrace();
         }
     }
+
+    public String getFriendRequest(){
+        try {
+            return Server.Loadweb(url + "GetFriendRequestList.php?user="+user+"&pass="+pass);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "{}";
+    }
 }

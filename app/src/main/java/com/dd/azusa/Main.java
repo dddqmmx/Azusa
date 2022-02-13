@@ -78,6 +78,11 @@ public class Main extends AppCompatActivity {
 
         //好友界面
         View view2 = inflater.inflate(R.layout.view_buddy, null);
+        RelativeLayout friendRequestList = view2.findViewById(R.id.request);
+        friendRequestList.setOnClickListener((view)->{
+            startActivity(new Intent(Main.this,FriendRequestList.class));
+        });
+
 
         //个人信息加设置的缝合界面
         View view3 = inflater.inflate(R.layout.view_account, null);

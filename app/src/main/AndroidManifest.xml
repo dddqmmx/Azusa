@@ -23,6 +23,10 @@
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,MissingClass,UnusedAttribute">
         <activity
+            android:label="新朋友"
+            android:name=".FriendRequestList"
+            android:exported="false" />
+        <activity
             android:name=".UserInfo"
             android:exported="false" />
         <activity
