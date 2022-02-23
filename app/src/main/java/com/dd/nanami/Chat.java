@@ -1,4 +1,4 @@
-package com.dd.azusa;
+package com.dd.nanami;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -20,9 +20,9 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.dd.azusa.contact.Contact;
-import com.dd.azusa.contact.Group;
-import com.dd.azusa.function.Control;
+import com.dd.nanami.contact.Contact;
+import com.dd.nanami.contact.Group;
+import com.dd.nanami.function.Control;
 
 import org.json.JSONException;
 import org.json.JSONObject;

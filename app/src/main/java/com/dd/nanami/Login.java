@@ -1,4 +1,4 @@
-package com.dd.azusa;
+package com.dd.nanami;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.dd.azusa.function.Control;
-import com.dd.azusa.view.Dialogs;
+import com.dd.nanami.function.Control;
+import com.dd.nanami.view.Dialogs;
 
 public class Login extends AppCompatActivity {
 

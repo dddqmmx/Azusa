@@ -1,4 +1,4 @@
-package com.dd.azusa.function;
+package com.dd.nanami.function;
 
 import android.Manifest;
 import android.app.Activity;
@@ -15,8 +15,8 @@ import android.widget.ImageView;
 
 import androidx.core.app.ActivityCompat;
 
-import com.dd.azusa.util.Files;
-import com.dd.azusa.util.Server;
+import com.dd.nanami.util.Files;
+import com.dd.nanami.util.Server;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.dd.azusa;
+package com.dd.nanami;
 
 import static java.lang.Thread.sleep;
 
@@ -16,8 +16,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
-import com.dd.azusa.function.Control;
-import com.dd.azusa.util.Files;
+import com.dd.nanami.function.Control;
+import com.dd.nanami.util.Files;
 
 import java.io.File;
 import java.io.FileOutputStream;

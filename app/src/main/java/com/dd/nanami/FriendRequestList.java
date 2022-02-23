@@ -1,4 +1,4 @@
-package com.dd.azusa;
+package com.dd.nanami;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.dd.azusa.function.Control;
+import com.dd.nanami.function.Control;
 
 import org.json.JSONException;
 import org.json.JSONObject;

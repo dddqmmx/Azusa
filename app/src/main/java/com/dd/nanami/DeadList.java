@@ -1,4 +1,4 @@
-package com.dd.azusa;
+package com.dd.nanami;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.dd.azusa.function.Control;
+import com.dd.nanami.function.Control;
 
 public class DeadList extends AppCompatActivity {
 

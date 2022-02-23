@@ -1,4 +1,4 @@
-package com.dd.azusa.util;
+package com.dd.nanami.util;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;

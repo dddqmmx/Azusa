@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.dd.azusa">
+    package="com.dd.nanami">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -12,7 +12,7 @@
         tools:ignore="ScopedStorage" />
 
     <application
-        android:name=".function.Control"
+        android:name="com.dd.nanami.function.Control"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -24,45 +24,45 @@
         tools:ignore="AllowBackup,MissingClass,UnusedAttribute">
         <activity
             android:label="新朋友"
-            android:name=".FriendRequestList"
+            android:name="com.dd.nanami.FriendRequestList"
             android:exported="false" />
         <activity
-            android:name=".UserInfo"
+            android:name="com.dd.nanami.UserInfo"
             android:exported="false" />
         <activity
-            android:name=".FileList"
+            android:name="com.dd.nanami.FileList"
             android:exported="false" />
         <activity
-            android:name=".SetUp"
+            android:name="com.dd.nanami.SetUp"
             android:exported="false"
             android:label="设置" />
         <activity
-            android:name=".MyInfo"
+            android:name="com.dd.nanami.MyInfo"
             android:exported="false"
             android:label="我的信息" />
         <activity
-            android:name=".Author"
+            android:name="com.dd.nanami.Author"
             android:exported="false"
             android:label="开发团队" />
         <activity
-            android:name=".Chat"
+            android:name="com.dd.nanami.Chat"
             android:exported="false" />
         <activity
-            android:name=".DeadList"
+            android:name="com.dd.nanami.DeadList"
             android:exported="false"
             android:label="冥人堂" />
         <activity
-            android:name=".UpDate"
+            android:name="com.dd.nanami.UpDate"
             android:exported="true"
             android:label="软件更新" />
         <activity
-            android:name=".Login"
+            android:name="com.dd.nanami.Login"
             android:exported="true" />
         <activity
-            android:name=".Main"
+            android:name="com.dd.nanami.Main"
             android:exported="true" />
         <activity
-            android:name=".Load"
+            android:name="com.dd.nanami.Load"
             android:exported="true"
             android:theme="@style/Theme.NoTitleFullscreen">
             <intent-filter>
@@ -74,7 +74,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.dd.azusa.provider"
+            android:authorities="com.dd.nanami.provider"
             android:exported="false"
             android:grantUriPermissions="true">
 

@@ -1,4 +1,4 @@
-package com.dd.azusa.view;
+package com.dd.nanami.view;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.dd.azusa.R;
+import com.dd.nanami.R;
 
 public class Dialogs extends Dialog {
 

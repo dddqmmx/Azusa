@@ -1,4 +1,4 @@
-package com.dd.azusa;
+package com.dd.nanami;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,8 +7,8 @@ import android.os.StrictMode;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.dd.azusa.function.Control;
-import com.dd.azusa.view.Dialogs;
+import com.dd.nanami.function.Control;
+import com.dd.nanami.view.Dialogs;
 
 /**
  * 加载界面

@@ -1,14 +1,14 @@
-package com.dd.azusa;
+package com.dd.nanami;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SetUp extends AppCompatActivity {
+public class Author extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_set_up);
+        setContentView(R.layout.activity_author);
     }
 }

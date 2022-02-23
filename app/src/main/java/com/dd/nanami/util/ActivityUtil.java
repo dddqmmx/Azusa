@@ -1,4 +1,4 @@
-package com.dd.azusa.util;
+package com.dd.nanami.util;
 
 import android.app.Activity;
 import android.widget.Toast;

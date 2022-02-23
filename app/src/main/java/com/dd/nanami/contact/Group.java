@@ -1,7 +1,7 @@
-package com.dd.azusa.contact;
+package com.dd.nanami.contact;
 
-import com.dd.azusa.function.Control;
-import com.dd.azusa.util.Server;
+import com.dd.nanami.function.Control;
+import com.dd.nanami.util.Server;
 
 import java.io.IOException;
 
