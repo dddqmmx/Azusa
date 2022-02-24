@@ -22,14 +22,14 @@
             tools:ignore="HardcodedText,SpUsage" />
 
         <ImageView
-            android:id="@+id/imageView"
-            android:adjustViewBounds="true"
+            android:id="@+id/loadImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:layout_weight="1"
-            android:src="@drawable/azusa"
+            android:adjustViewBounds="true"
+            android:src="@drawable/load"
             tools:ignore="ContentDescription,ObsoleteLayoutParam" />
     </RelativeLayout>
 

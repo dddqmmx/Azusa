@@ -4,11 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.dd.nanami.function.Control;
-import com.dd.nanami.view.Dialogs;
 
 /**
  * 加载界面
@@ -29,12 +30,18 @@ public class Load extends AppCompatActivity {
         control = (Control) getApplication();       //获取控制方法
         setContentView(R.layout.activity_load);     //设置加载界面
 
+        ImageView loadImageView = findViewById(R.id.loadImageView);
+        Glide.with(this).load(R.drawable.load).into(loadImageView);
+
         new Thread(()->{
             try {
                 int version=activity.getPackageManager().getPackageInfo(this.getPackageName(),0).versionCode;   //客户端版本号
                 Thread.sleep(2000);           //停止线程
                 control.initialize(activity);       //初始化
-                if ( control.getUpDate(version) ) {
+
+                //暂时弃用,这个bug目前没能力修复
+
+                /*if ( control.getUpDate(version) ) {
                     //需要更新
                     activity.runOnUiThread(()->{
                         Dialogs dialogs = new Dialogs(this,R.style.MyDialog);
@@ -57,7 +64,9 @@ public class Load extends AppCompatActivity {
                 } else {
                     //无需更
                     login();
-                }
+                }*/
+
+                login();
             } catch (Exception e) {
                 //抛出异常
                 e.printStackTrace();

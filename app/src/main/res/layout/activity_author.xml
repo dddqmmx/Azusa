@@ -38,14 +38,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="Azusa"
+                    android:text="@string/app_name"
                     android:textSize="25dp"
                     tools:ignore="HardcodedText,SpUsage" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Test"
+                    android:text="醒醒了武侍,咱们去把这座城市烧成灰"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
