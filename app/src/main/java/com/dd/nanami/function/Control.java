@@ -393,4 +393,12 @@ public class Control extends Application {
         }
         return "{}";
     }
+
+    public void agreeFriendRequest(long id){
+        try {
+            Server.Loadweb(url + "AgreeFriendRequest.php?user="+user+"&pass="+pass+"&id=" + id);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

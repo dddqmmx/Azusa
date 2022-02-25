@@ -45,7 +45,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="醒醒了武侍,咱们去把这座城市烧成灰"
+                    android:text="Wake the fuck up Samurai.We have a city to burn."
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>

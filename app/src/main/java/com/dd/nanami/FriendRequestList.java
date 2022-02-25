@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -56,6 +57,11 @@ public class FriendRequestList extends AppCompatActivity {
         control.setUserHead(id,headImage,this);
         TextView newsName=entryView.findViewById(R.id.Name);
         newsName.setText(control.getUserName(id));
+        Button ok = entryView.findViewById(R.id.ok);
+        ok.setOnClickListener((view)->{
+            control.agreeFriendRequest(Long.parseLong(id));
+            friendRequestList.removeView(entryView);
+        });
         friendRequestList.addView(entryView);
     }
 }
