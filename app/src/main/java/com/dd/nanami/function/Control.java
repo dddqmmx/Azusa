@@ -15,6 +15,7 @@ import android.widget.ImageView;
 
 import androidx.core.app.ActivityCompat;
 
+import com.bumptech.glide.Glide;
 import com.dd.nanami.util.Files;
 import com.dd.nanami.util.Server;
 
@@ -26,11 +27,11 @@ import java.util.Map;
 
 public class Control extends Application {
 
-    public String filePath = "/storage/emulated/0/Azusa";        //文件储存位置
-    public String protocol = "39.107.229.253";                   //服务器地址
-    public String url = "http://" + protocol + "/api/";              //api地址
-    public String configPath = filePath + "/ConfigurationFile";    //配置文件地址
-    Files files = new Files();                                   //文件操作
+    public String filePath = null;          //文件储存位置
+    public String protocol = "39.107.229.253";                     //服务器地址
+    public String url = "http://" + protocol + "/api/";            //api地址
+    public String configPath = null;    //配置文件地址
+    Files files = new Files();                                     //文件操作
 
     public String user = null;                                     //用户名
     public String pass = null;                                     //密码
@@ -311,7 +312,7 @@ public class Control extends Application {
         new Thread(() -> {
             Bitmap messageImage = getMessageImage(id);
             if (messageImage != null) {
-                activity.runOnUiThread(() -> imageView.setImageBitmap(messageImage));
+                activity.runOnUiThread(() -> Glide.with(activity).load(messageImage).into(imageView));
             }
         }).start();
     }

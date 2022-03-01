@@ -41,7 +41,6 @@
             android:layout_weight="1"
             android:adjustViewBounds="true"
             android:paddingTop="20dp"
-            android:src="@drawable/update"
             tools:ignore="ContentDescription,ObsoleteLayoutParam" />
 
     </RelativeLayout>

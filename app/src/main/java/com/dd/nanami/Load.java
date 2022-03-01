@@ -33,6 +33,9 @@ public class Load extends AppCompatActivity {
         ImageView loadImageView = findViewById(R.id.loadImageView);
         Glide.with(this).load(R.drawable.load).into(loadImageView);
 
+        control.filePath = this.getExternalCacheDir().getPath();
+        control.configPath = control.filePath + "/ConfigurationFile";
+
         new Thread(()->{
             try {
                 int version=activity.getPackageManager().getPackageInfo(this.getPackageName(),0).versionCode;   //客户端版本号

@@ -19,6 +19,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.dd.nanami.function.Control;
+import com.dd.nanami.service.MusicService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -41,6 +42,8 @@ public class Main extends AppCompatActivity {
         control = (Control) getApplication();       //获取控制方法
 
         setContentView(R.layout.activity_main);
+
+        startService(new Intent(this, MusicService.class));
 
         fragment_vp = findViewById(R.id.fragment_vp);
         btmNavView = findViewById(R.id.bottomNavigation);
@@ -82,7 +85,6 @@ public class Main extends AppCompatActivity {
         friendRequestList.setOnClickListener((view)->{
             startActivity(new Intent(Main.this,FriendRequestList.class));
         });
-
 
         //个人信息加设置的缝合界面
         View view3 = inflater.inflate(R.layout.view_account, null);
