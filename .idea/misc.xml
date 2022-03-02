@@ -56,10 +56,12 @@
         <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/activity_login.xml" value="0.13095238095238096" />
         <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/activity_main.xml" value="0.13095238095238096" />
         <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/activity_my_info.xml" value="0.2658514492753623" />
+        <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/activity_set_up.xml" value="0.2667572463768116" />
         <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/activity_up_date.xml" value="0.2658514492753623" />
         <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/activity_user_info.xml" value="0.13095238095238096" />
         <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/view_account.xml" value="0.13095238095238096" />
-        <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/view_buddy.xml" value="0.13095238095238096" />
+        <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/view_buddy.xml" value="0.22" />
+        <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/view_chat.xml" value="0.2667572463768116" />
         <entry key="..\:/project/Android/Nanami/app/src/main/res/layout/view_reques.xml" value="0.2658514492753623" />
       </map>
     </option>

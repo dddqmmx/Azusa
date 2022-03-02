@@ -36,8 +36,8 @@ public class FriendRequestList extends AppCompatActivity {
 
         new Thread(()->{
             try {
-                JSONObject json = new JSONObject(control.getFriendRequest());
-                Iterator iterator = json.keys();
+                JSONObject json = new JSONObject(control.getFriendRequestList());
+                Iterator<String> iterator = json.keys();
                 while (iterator.hasNext()){
                     String key = (String) iterator.next();
                     String value = json.getString(key);

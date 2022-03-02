@@ -1,6 +1,7 @@
 package com.dd.nanami;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
@@ -22,7 +23,11 @@ import com.dd.nanami.function.Control;
 import com.dd.nanami.service.MusicService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Main extends AppCompatActivity {
@@ -32,6 +37,7 @@ public class Main extends AppCompatActivity {
     private ViewPager fragment_vp;
     private List<View> mViews;  //存放视图的数组
 
+    Activity activity;
     Control control;                    //控制方法
 
     @SuppressLint({"InflateParams", "NonConstantResourceId", "SetTextI18n"})
@@ -40,6 +46,7 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         control = (Control) getApplication();       //获取控制方法
+        activity = this;
 
         setContentView(R.layout.activity_main);
 
@@ -85,6 +92,23 @@ public class Main extends AppCompatActivity {
         friendRequestList.setOnClickListener((view)->{
             startActivity(new Intent(Main.this,FriendRequestList.class));
         });
+        LinearLayout friendList = view2.findViewById(R.id.list);
+        new Thread(()->{
+            try {
+                JSONObject json = new JSONObject(control.getFriendList());
+                Iterator<String> iterator = json.keys();
+                while (iterator.hasNext()){
+                    String key = (String) iterator.next();
+                    String value = json.getString(key);
+                    activity.runOnUiThread(()->{
+                        friendList.addView(friendView(Long.parseLong(key)));
+                    });
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
 
         //个人信息加设置的缝合界面
         View view3 = inflater.inflate(R.layout.view_account, null);
@@ -103,7 +127,6 @@ public class Main extends AppCompatActivity {
 
         TextView idText =view3.findViewById(R.id.id);
         idText.setText("ID : " + control.user);
-
 
         RelativeLayout deadList = view3.findViewById(R.id.DeadList);
         deadList.setOnClickListener((view)->{
@@ -209,6 +232,21 @@ public class Main extends AppCompatActivity {
             startActivity(intent);
         });
         newsName.setText(name);
+        return EntryView;
+    }
+
+    public View friendView(long id) {
+        LayoutInflater factory=LayoutInflater.from(Main.this);
+        @SuppressLint("InflateParams") View EntryView=factory.inflate(R.layout.view_news, null);
+        ImageView avatar=EntryView.findViewById(R.id.Avatar);
+        control.setUserHead(String.valueOf(id),avatar,this);
+        TextView newsName=EntryView.findViewById(R.id.Name);
+        newsName.setText(control.getUserName(String.valueOf(id)));
+        EntryView.setOnClickListener(view -> {
+            Intent intent = new Intent(this,UserInfo.class);
+            intent.putExtra("id",id);
+            startActivity(intent);
+        });
         return EntryView;
     }
 }

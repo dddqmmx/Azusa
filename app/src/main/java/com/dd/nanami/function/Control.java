@@ -386,7 +386,7 @@ public class Control extends Application {
         }
     }
 
-    public String getFriendRequest(){
+    public String getFriendRequestList(){
         try {
             return Server.Loadweb(url + "GetFriendRequestList.php?user="+user+"&pass="+pass);
         } catch (IOException e) {
@@ -402,4 +402,14 @@ public class Control extends Application {
             e.printStackTrace();
         }
     }
+
+    public String getFriendList(){
+        try {
+            return Server.Loadweb(url + "GetFriendList.php?user="+user+"&pass="+pass);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "{}";
+    }
+
 }
