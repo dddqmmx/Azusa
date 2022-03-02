@@ -360,6 +360,10 @@ public class Control extends Application {
         Server.Upload(file, url + "UploadUserHead.php?user=" + user + "&pass=" + pass);
     }
 
+    public void uploadUserHead(InputStream is){
+        Server.Upload(is, url + "UploadUserHead.php?user=" + user + "&pass=" + pass);
+    }
+
     //发送图片
     public void sendImage(File file,String group){
         try {

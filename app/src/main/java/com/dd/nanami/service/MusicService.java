@@ -29,13 +29,7 @@ public class MusicService extends Service {
             //异步准备
             mediaPlayer.prepareAsync();
             //添加准备好的监听
-            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    //如果准备好了，就会进行这个方法
-                    mp.start();
-                }
-            });
+            mediaPlayer.setOnPreparedListener(MediaPlayer::start);
         } catch (IOException e) {
             e.printStackTrace();
         }

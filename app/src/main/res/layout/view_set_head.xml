@@ -16,10 +16,21 @@
 
 		<TextView
 			android:layout_marginTop="1dp"
+			android:id="@+id/open_system_album"
+			android:layout_width="match_parent"
+			android:textColor="#333"
+			android:text="打开系统图库"
+			android:padding="8dp"
+			android:gravity="center"
+			android:textSize="15sp"
+			android:layout_height="40dp"/>
+
+		<TextView
+			android:layout_marginTop="1dp"
 			android:id="@+id/open_album"
 			android:layout_width="match_parent"
 			android:textColor="#333"
-			android:text="打开图库"
+			android:text="打开软件图库"
 			android:padding="8dp"
 			android:gravity="center"
 			android:textSize="15sp"

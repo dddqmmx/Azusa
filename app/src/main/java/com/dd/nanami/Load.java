@@ -38,13 +38,13 @@ public class Load extends AppCompatActivity {
 
         new Thread(()->{
             try {
-                int version=activity.getPackageManager().getPackageInfo(this.getPackageName(),0).versionCode;   //客户端版本号
+                //暂时弃用,这个bug目前没能力修复
+
+                /*int version=activity.getPackageManager().getPackageInfo(this.getPackageName(),0).versionCode;   //客户端版本号
                 Thread.sleep(2000);           //停止线程
                 control.initialize(activity);       //初始化
 
-                //暂时弃用,这个bug目前没能力修复
-
-                /*if ( control.getUpDate(version) ) {
+                if ( control.getUpDate(version) ) {
                     //需要更新
                     activity.runOnUiThread(()->{
                         Dialogs dialogs = new Dialogs(this,R.style.MyDialog);
