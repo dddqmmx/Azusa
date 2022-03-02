@@ -19,6 +19,7 @@ public class Group extends Contact{
         if(refresh){
             if(Integer.parseInt(serverRow)<row){
                 row=0;
+                block+=1;
             }
             localRow=Integer.parseInt(serverRow);
         }
@@ -27,6 +28,7 @@ public class Group extends Contact{
 
     @Override
     public String getMsg(String block, String row) throws Exception {
+        System.out.println(block+","+row);
         return Server.Loadweb(control.url+"GetGroupContent.php?group="+chatId+"&block="+block+"&row="+row);
     }
 
